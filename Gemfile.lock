@@ -157,6 +157,8 @@ GEM
     jekyll-jupyter-notebook (0.0.6)
       jekyll
     jekyll-link-attributes (1.0.1)
+    jekyll-loading-lazy (0.1.0)
+      jekyll (>= 3.0, < 5.0)
     jekyll-minifier (0.2.2)
       cssminify2 (~> 2.1.0)
       htmlcompressor (~> 0.4)
@@ -311,6 +313,7 @@ DEPENDENCIES
   jekyll-imagemagick
   jekyll-jupyter-notebook
   jekyll-link-attributes
+  jekyll-loading-lazy
   jekyll-minifier
   jekyll-paginate-v2
   jekyll-regex-replace
