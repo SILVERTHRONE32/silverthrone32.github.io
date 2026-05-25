@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 
+gem 'jekyll-loading-lazy'
+
 # Core plugins that directly affect site building
 group :jekyll_plugins do
     gem 'jekyll-3rd-party-libraries'
