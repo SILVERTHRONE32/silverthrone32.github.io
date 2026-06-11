@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sachin Mahesh — Builder, UC Berkeley M.E.T.</title>
+  <meta name="description" content="Sachin Mahesh — builder studying EECS + Business in UC Berkeley's M.E.T. program. Turning constraints into architecture.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply saved theme before first paint to avoid a flash
+    (function () {
+      try {
+        var saved = localStorage.getItem('sm-portfolio-theme');
+        var theme = (saved === 'dark' || saved === 'light')
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <span>sachin-mahesh · berkeley, ca</span>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">[ dark ]</button>
+    </div>
+
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Sachin Mahesh</h1>
+        <p class="tagline">Turning constraints into architecture.<span class="cursor">_</span></p>
+        <p class="intro">Builder studying EECS + Business in UC Berkeley's M.E.T. program. I make cheap, robust systems for problems that usually get expensive ones — farm emissions, assistive hardware, startup tooling.</p>
+      </div>
+      <img class="portrait" src="sachin.jpg" alt="Sachin Mahesh">
+    </header>
+
+    <nav class="links">
+      <a href="https://github.com/SILVERTHRONE32/" target="_blank" rel="noopener">github ↗</a>
+      <a href="https://huggingface.co/SILVERTHRONE" target="_blank" rel="noopener">huggingface ↗</a>
+      <a href="https://www.linkedin.com/in/sachin-mahesh/" target="_blank" rel="noopener">linkedin ↗</a>
+    </nav>
+
+    <section>
+      <h2>01 — Things I've built</h2>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">IdeaGenie</span>
+            <span class="date">2023</span>
+          </div>
+          <p>Free semantic search that finds a startup's closest existing competitors. Trained on 1M+ companies from Crunchbase, Product Hunt, YC, and Kickstarter.</p>
+          <span class="tags">full-stack · machine learning</span>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Preserve</span>
+            <span class="date">2023</span>
+          </div>
+          <p>Sensor-based, low-cost emissions management for small and medium farms. Published at IEEE Green Energy and Smart Systems Conference 2023.</p>
+          <span class="tags">embedded sensors · ieee publication</span>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Skip-A-Slip</span>
+            <span class="date">2018–19</span>
+          </div>
+          <p>A guide stick that detects wet surfaces and warns visually-impaired users through audio — one NE555 timer circuit, nearly zero added cost or weight.</p>
+          <span class="tags">patented · IES87168</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>02 — Experience</h2>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-head">
+            <span><span class="entry-title">stEP Business Incubator</span><span class="entry-org"> · Berkeley Haas</span></span>
+            <span class="date">2024</span>
+          </div>
+          <p>Selected to validate a B2B agricultural-emissions platform; designed a dual-sided marketplace connecting farmers with sustainable buyers.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <span><span class="entry-title">Patch Accelerator Fellow</span><span class="entry-org"> · Dogpatch Labs</span></span>
+            <span class="date">2023</span>
+          </div>
+          <p>One of ~30 fellows in Ireland's premier youth accelerator, backed by Stripe and NDRC. Mentored directly by founders of Intercom and Stripe.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head">
+            <span><span class="entry-title">Process Engineering Intern</span><span class="entry-org"> · Intel</span></span>
+            <span class="date">2023</span>
+          </div>
+          <p>Back-End Metals module at FAB-24's 14nm fab in Leixlip — physical vapor deposition, metal etch, and statistical process control on the line.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>03 — Recognition</h2>
+      <div class="recognition">
+        <div>
+          <span>Irish patent <span class="id">IES87168</span> — liquid-detecting guide stick</span>
+          <span class="date">2020</span>
+        </div>
+        <div>
+          <span>IEEE GESSC publication — <span class="hl">Preserve</span></span>
+          <span class="date">2023</span>
+        </div>
+        <div>
+          <span>SciFest National Finals — Excellence in STEM, top 0.125% nationally</span>
+          <span class="date">2023</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>04 — Now</h2>
+      <p class="now-text">Mentoring engineers through Berkeley's EMP, repping <span class="hl">Perplexity</span> on campus, and building PCs when I should be sleeping. Always up for a hackathon — <a href="https://www.linkedin.com/in/sachin-mahesh/" target="_blank" rel="noopener">say hi</a>.</p>
+    </section>
+
+    <footer>
+      <span>© 2026 Sachin Mahesh</span>
+      <span>hand-built · no frameworks</span>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      function label() {
+        var t = document.documentElement.getAttribute('data-theme');
+        btn.textContent = t === 'dark' ? '[ light ]' : '[ dark ]';
+      }
+      btn.addEventListener('click', function () {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('sm-portfolio-theme', next); } catch (e) {}
+        label();
+      });
+      label();
+    })();
+  </script>
+</body>
+</html>
