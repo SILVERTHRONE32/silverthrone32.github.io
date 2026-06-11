@@ -1,0 +1,218 @@
+/* Sachin Mahesh — personal site */
+
+:root {
+  --bg: #fcfcfb;
+  --text: #1c1917;
+  --muted: #79716b;
+  --faint: #a8a29e;
+  --border: #e7e5e4;
+  --accent: #0d7a3f;
+}
+
+[data-theme="dark"] {
+  --bg: #101110;
+  --text: #e7e5e4;
+  --muted: #8f8a84;
+  --faint: #6b6660;
+  --border: #2a2b29;
+  --accent: #4ade80;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15.5px;
+  line-height: 1.65;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+.mono { font-family: "IBM Plex Mono", monospace; }
+
+.wrap {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 40px 24px 96px;
+}
+
+/* top bar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  color: var(--muted);
+  padding-bottom: 56px;
+}
+
+.theme-toggle {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* hero */
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-text { flex: 1 1 360px; min-width: 280px; }
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.tagline {
+  margin: 0 0 20px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.cursor { animation: blink 1.2s steps(1) infinite; }
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.intro { margin: 0; color: var(--muted); max-width: 46ch; }
+
+.portrait {
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+
+/* links */
+.links {
+  display: flex;
+  gap: 24px;
+  margin-top: 28px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+}
+
+.links a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.links a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* sections */
+section { margin-top: 72px; }
+
+h2 {
+  margin: 0 0 24px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.entries { display: grid; gap: 28px; }
+
+.entry { display: grid; gap: 4px; }
+
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.entry-title { font-weight: 600; }
+.entry-org { color: var(--muted); }
+
+.date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+.entry p { margin: 0; color: var(--muted); }
+
+.tags {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+/* recognition list */
+.recognition { display: grid; gap: 12px; }
+
+.recognition > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.recognition span:first-child { color: var(--muted); }
+.recognition .hl { color: var(--text); }
+.recognition .id {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* now */
+.now-text { margin: 0; color: var(--muted); max-width: 56ch; }
+.now-text .hl { color: var(--text); }
+
+.now-text a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+/* footer */
+footer {
+  margin-top: 96px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  color: var(--faint);
+}
